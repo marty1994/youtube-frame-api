@@ -20,6 +20,7 @@ def get_stream_url(youtube_url: str) -> str:
     ydl_opts = {
         "quiet": True,
         "noplaylist": True,
+        "cookiefile": "/etc/secrets/cookies.txt",
         "format": "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
