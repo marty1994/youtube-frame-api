@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: youtube-frame-api
+    env: docker
+    plan: starter
+    autoDeploy: true
+    envVars:
+      - key: API_KEY
+        generateValue: true
